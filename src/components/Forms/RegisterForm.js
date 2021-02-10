@@ -12,7 +12,6 @@ const RegisterForm = () => {
   const setUsers = context.setUsers;
   const history = useHistory();
 
-  localStorage.removeItem("name");
   const [name, setName] = useState("");
 
   const submitHandler = (e) => {

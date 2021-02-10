@@ -1,22 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 import classes from "./index.module.css";
 
 import { Context } from "../../App";
-import useLocalStorage from "../../hooks/useLocalStorage";
 
 const LoginForm = () => {
   const context = useContext(Context);
   const users = context.users;
   const history = useHistory();
 
-  const [name, setName] = useLocalStorage("name", "");
+  const [name, setName] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
     if (users.includes(name) && name.length !== 0) {
+      localStorage.setItem("name", JSON.stringify(name));
       context.login();
       history.push("/");
     } else {
