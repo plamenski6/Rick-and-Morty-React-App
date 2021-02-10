@@ -1,0 +1,13 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #80F6FF;
+    height: 39px
+}
+
+.footer h2{
+    margin: 0;
+    font-family: 'Risque', cursive;
+}

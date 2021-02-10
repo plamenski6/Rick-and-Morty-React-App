@@ -1,0 +1,42 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Risque', cursive;
+}
+
+.home-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-heading {
+    font-size: 100px;
+    color: #00a8bb;
+    margin-top: 50px;
+}
+
+@media (max-width: 767.98px) {
+    .home-heading {
+        font-size: 75px;
+        margin-top: 100px
+    }
+    .image {
+        width: 75%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .home-heading {
+        font-size: 50px;
+    }
+}
+
+@media (max-width : 399.98px) {
+    .home-heading {
+        font-size: 40px;
+    }
+}

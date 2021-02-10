@@ -1,0 +1,25 @@
+.login, .register {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.register-form, .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4FEFF;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+
+.register-form h2, .login-form h2 {
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
