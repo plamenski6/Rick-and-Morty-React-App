@@ -53,6 +53,7 @@
 
 .buttons {
     display: flex;
+    margin-top: 5px;
 }
 
 .p-all {
@@ -61,4 +62,8 @@
 
 .episode-modal {
     background-color: #DCFDFF;
+}
+
+.cardAtr {
+    margin: 0;
 }

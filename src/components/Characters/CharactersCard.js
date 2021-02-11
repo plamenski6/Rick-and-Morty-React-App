@@ -18,7 +18,7 @@ const CharactersCard = ({ data }) => {
         </Card.Body>
       </Card>
       <Modal
-        size="lg"
+        size="xl"
         aria-labelledby="contained-modal-title-vcenter"
         centered
         show={show}
@@ -54,6 +54,10 @@ const CharactersCard = ({ data }) => {
                     Origin:{" "}
                     <span className={classes.details}>{data.origin.name}</span>
                   </p>
+                  <p>
+                    Location:{" "}
+                    <span className={classes.details}>{data.location.name}</span>
+                  </p>
                 </>
               ) : (
                 <>
@@ -72,6 +76,10 @@ const CharactersCard = ({ data }) => {
                   <p>
                     Origin:{" "}
                     <span className={classes.details}>{data.origin.name}</span>
+                  </p>
+                  <p>
+                    Location:{" "}
+                    <span className={classes.details}>{data.location.name}</span>
                   </p>
                 </>
               )}

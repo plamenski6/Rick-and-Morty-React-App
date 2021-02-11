@@ -23,6 +23,12 @@ const CharCards = ({ data }) => {
         <Card.Img variant="top" src={data.image} />
         <Card.Body>
           <Card.Title>{data.name}</Card.Title>
+          <Card.Text className={classes.cardAtr}>
+            Status: {data.status}
+          </Card.Text>
+          <Card.Text className={classes.cardAtr}>
+            Species: {data.species}
+          </Card.Text>
           <div className={classes.buttons}>
             <Button size="sm" variant="secondary" onClick={handleShowOrigin}>
               Origin
