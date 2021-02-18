@@ -11,11 +11,10 @@ const EpisodesCard = ({ data }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  let arrayNum = [];
-  data.characters.map((res, index) => {
+  let arrayNum = data.characters.map((res, index) => {
     let theNum = res.replace(/^\D+/g, "");
     theNum = res.match(/\d+/)[0];
-    arrayNum.push(theNum);
+    return theNum;
   });
   let urlCharacters = `https://rickandmortyapi.com/api/character/${arrayNum},`;
 

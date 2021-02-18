@@ -23,7 +23,7 @@ const Characters = ({ data }) => {
     };
     getEpisodeCharacters();
   }, [data]);
-  
+
   return (
     <div className={classes.characters}>
       {!isLoading ? (
@@ -33,33 +33,33 @@ const Characters = ({ data }) => {
               if (index % 4 === 0) {
                 return (
                   <Row key={index}>
-                    <Col xs={6} lg={3} className={classes["modal-col"]}>
-                      {characters?.[index] && (
+                    {characters?.[index] && (
+                      <Col xs={6} lg={3} className={classes["modal-col"]}>
                         <CharCards data={characters[index]} />
-                      )}
-                    </Col>
-                    <Col xs={6} lg={3} className={classes["modal-col"]}>
-                      {characters?.[index + 1] && (
+                      </Col>
+                    )}
+                    {characters?.[index + 1] && (
+                      <Col xs={6} lg={3} className={classes["modal-col"]}>
                         <CharCards data={characters[index + 1]} />
-                      )}
-                    </Col>
-                    <Col xs={6} lg={3} className={classes["modal-col"]}>
-                      {characters?.[index + 2] && (
+                      </Col>
+                    )}
+                    {characters?.[index + 2] && (
+                      <Col xs={6} lg={3} className={classes["modal-col"]}>
                         <CharCards data={characters[index + 2]} />
-                      )}
-                    </Col>
-                    <Col xs={6} lg={3} className={classes["modal-col"]}>
-                      {characters?.[index + 3] && (
+                      </Col>
+                    )}
+                    {characters?.[index + 3] && (
+                      <Col xs={6} lg={3} className={classes["modal-col"]}>
                         <CharCards data={characters[index + 3]} />
-                      )}
-                    </Col>
+                      </Col>
+                    )}
                   </Row>
                 );
               }
             })}
         </Container>
       ) : (
-        <Spinner animation="border"/>
+        <Spinner animation="border" />
       )}
     </div>
   );

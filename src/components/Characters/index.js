@@ -60,7 +60,7 @@ const Characters = () => {
     );
     setSearchResults(results);
   }, [searchTerm, setSearchResults, data]);
-  
+
   return (
     <div className={classes.characters}>
       <h2>Characters</h2>
@@ -80,26 +80,26 @@ const Characters = () => {
                 if (index % 4 === 0) {
                   return (
                     <Row key={index} className={classes.row}>
-                      <Col xs={6} md={3} className={classes.col}>
-                        {searchResults?.[index] && (
+                      {searchResults?.[index] && (
+                        <Col xs={6} md={3} className={classes.col}>
                           <CharactersCard data={searchResults[index]} />
-                        )}
-                      </Col>
-                      <Col xs={6} md={3} className={classes.col}>
-                        {searchResults?.[index + 1] && (
+                        </Col>
+                      )}
+                      {searchResults?.[index + 1] && (
+                        <Col xs={6} md={3} className={classes.col}>
                           <CharactersCard data={searchResults[index + 1]} />
-                        )}
-                      </Col>
-                      <Col xs={6} md={3} className={classes.col}>
-                        {searchResults?.[index + 2] && (
+                        </Col>
+                      )}
+                      {searchResults?.[index + 2] && (
+                        <Col xs={6} md={3} className={classes.col}>
                           <CharactersCard data={searchResults[index + 2]} />
-                        )}
-                      </Col>
-                      <Col xs={6} md={3} className={classes.col}>
-                        {searchResults?.[index + 3] && (
+                        </Col>
+                      )}
+                      {searchResults?.[index + 3] && (
+                        <Col xs={6} md={3} className={classes.col}>
                           <CharactersCard data={searchResults[index + 3]} />
-                        )}
-                      </Col>
+                        </Col>
+                      )}
                     </Row>
                   );
                 }
@@ -112,7 +112,11 @@ const Characters = () => {
               </div>
             )}
           </Container>
-          <Button size="lg" variant="secondary" onClick={() => nextCharacters(requestInfo.next)}>
+          <Button
+            size="lg"
+            variant="secondary"
+            onClick={() => nextCharacters(requestInfo.next)}
+          >
             LOAD MORE CHARACTERS
           </Button>
         </>

@@ -62,24 +62,26 @@ const Episodes = () => {
               if (index % 4 === 0) {
                 return (
                   <Row key={index}>
-                    <Col xs={6} md={3} className={classes.col}>
-                      {data?.[index] && <EpisodesCard data={data[index]} />}
-                    </Col>
-                    <Col xs={6} md={3} className={classes.col}>
-                      {data?.[index + 1] && (
+                    {data?.[index] && (
+                      <Col xs={6} md={3} className={classes.col}>
+                        <EpisodesCard data={data[index]} />
+                      </Col>
+                    )}
+                    {data?.[index + 1] && (
+                      <Col xs={6} md={3} className={classes.col}>
                         <EpisodesCard data={data[index + 1]} />
-                      )}
-                    </Col>
-                    <Col xs={6} md={3} className={classes.col}>
-                      {data?.[index + 2] && (
+                      </Col>
+                    )}
+                    {data?.[index + 2] && (
+                      <Col xs={6} md={3} className={classes.col}>
                         <EpisodesCard data={data[index + 2]} />
-                      )}
-                    </Col>
-                    <Col xs={6} md={3} className={classes.col}>
-                      {data?.[index + 3] && (
+                      </Col>
+                    )}
+                    {data?.[index + 3] && (
+                      <Col xs={6} md={3} className={classes.col}>
                         <EpisodesCard data={data[index + 3]} />
-                      )}
-                    </Col>
+                      </Col>
+                    )}
                   </Row>
                 );
               }

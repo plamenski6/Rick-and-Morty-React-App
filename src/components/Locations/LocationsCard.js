@@ -11,14 +11,13 @@ const LocationsCard = ({ data }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  let arrayNum = [];
-  data.residents.map((res, index) => {
+  let arrayNum = data.residents.map((res, index) => {
     let theNum = res.replace(/^\D+/g, "");
     theNum = res.match(/\d+/)[0];
-    arrayNum.push(theNum);
-  })
+    return theNum;
+  });
   let urlCharacters = `https://rickandmortyapi.com/api/character/${arrayNum},`;
-  
+
   return (
     <>
       <Card className={classes.card} onClick={handleShow}>
@@ -50,7 +49,7 @@ const LocationsCard = ({ data }) => {
               <Characters data={urlCharacters} />
             </div>
           ) : (
-            <div className= {classes.noChars}>
+            <div className={classes.noChars}>
               <h4>There are no characters here.</h4>
             </div>
           )}
